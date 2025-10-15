@@ -41,7 +41,7 @@ if recv1[:3] != '250':
  
 # Send MAIL FROM command and print server response.
 # Fill in start
-mailFrom = 'MAIL FROM:<par226@lehigh.edu>\r\n'
+mailFrom = 'MAIL FROM:<email@lehigh.edu>\r\n' # replace with your email
 secure_socket.send(mailFrom.encode())
 recv2 = secure_socket.recv(1024).decode()
 print('MAIL FROM response: ', recv2)
@@ -51,7 +51,7 @@ if recv2[:3] != '250':
 
 # Send RCPT TO command and print server response.
 # Fill in start
-rcptTo = 'RCPT TO:<hipiers@icloud.com>\r\n'
+rcptTo = 'RCPT TO:<email@example.com>\r\n' # replace with recipient email
 secure_socket.send(rcptTo.encode())
 recv3 = secure_socket.recv(1024).decode()
 print('RCPT TO response: ', recv3)
